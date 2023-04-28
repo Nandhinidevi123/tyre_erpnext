@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "hash",
+ "autoname": "field:item_code",
  "creation": "2013-05-02 16:29:48",
  "description": "Multiple Item prices.",
  "doctype": "DocType",
@@ -49,7 +49,7 @@
    "oldfieldtype": "Select",
    "options": "Item",
    "reqd": 1,
-   "search_index": 1
+   "unique": 1
   },
   {
    "fieldname": "uom",
@@ -220,11 +220,11 @@
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-15 08:26:04.041861",
+ "modified": "2023-03-15 21:06:08.292112",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item Price",
- "naming_rule": "Random",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -250,6 +250,18 @@
    "read": 1,
    "report": 1,
    "role": "Purchase Master Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
    "share": 1,
    "write": 1
   }

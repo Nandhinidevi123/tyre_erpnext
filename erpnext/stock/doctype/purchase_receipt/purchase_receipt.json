@@ -9,19 +9,21 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_vhsha",
+  "naming_series",
   "supplier_section",
   "column_break0",
   "title",
-  "naming_series",
   "supplier",
   "supplier_name",
   "supplier_delivery_note",
   "column_break1",
   "posting_date",
+  "column_break_mwetz",
   "posting_time",
-  "set_posting_time",
   "column_break_12",
   "company",
+  "set_posting_time",
   "apply_putaway_rule",
   "is_return",
   "return_against",
@@ -37,8 +39,9 @@
   "price_list_currency",
   "plc_conversion_rate",
   "ignore_pricing_rule",
-  "sec_warehouse",
+  "section_break_jkqkm",
   "scan_barcode",
+  "sec_warehouse",
   "column_break_31",
   "set_warehouse",
   "set_from_warehouse",
@@ -59,10 +62,11 @@
   "net_total",
   "taxes_charges_section",
   "tax_category",
-  "taxes_and_charges",
   "shipping_col",
+  "taxes_and_charges",
   "shipping_rule",
   "column_break_53",
+  "total_taxes_and_charges",
   "incoterm",
   "named_place",
   "taxes_section",
@@ -74,15 +78,15 @@
   "column_break3",
   "taxes_and_charges_added",
   "taxes_and_charges_deducted",
-  "total_taxes_and_charges",
   "section_break_46",
+  "grand_total",
   "base_grand_total",
   "base_rounding_adjustment",
   "base_rounded_total",
   "base_in_words",
-  "column_break_50",
-  "grand_total",
+  "column_break_p2zcq",
   "rounding_adjustment",
+  "column_break_50",
   "rounded_total",
   "in_words",
   "disable_rounded_total",
@@ -214,6 +218,7 @@
   {
    "fieldname": "supplier_delivery_note",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Supplier Delivery Note"
   },
   {
@@ -358,6 +363,7 @@
    "collapsible": 1,
    "fieldname": "currency_and_price_list",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Currency and Price List",
    "options": "fa fa-tag"
   },
@@ -430,6 +436,7 @@
   {
    "fieldname": "set_warehouse",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Accepted Warehouse",
    "options": "Warehouse",
    "print_hide": 1
@@ -437,6 +444,7 @@
   {
    "fieldname": "rejected_warehouse",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Rejected Warehouse",
    "no_copy": 1,
    "oldfieldname": "rejected_warehouse",
@@ -452,6 +460,7 @@
    "default": "0",
    "fieldname": "is_subcontracted",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Subcontracted",
    "oldfieldname": "is_subcontracted",
    "oldfieldtype": "Select",
@@ -515,6 +524,7 @@
    "collapsible_depends_on": "supplied_items",
    "fieldname": "raw_material_details",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Raw Materials Consumed",
    "oldfieldtype": "Section Break",
    "options": "fa fa-table",
@@ -613,6 +623,7 @@
   {
    "fieldname": "shipping_rule",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Shipping Rule",
    "options": "Shipping Rule"
   },
@@ -698,6 +709,7 @@
   {
    "fieldname": "taxes_and_charges_added",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Taxes and Charges Added",
    "oldfieldname": "other_charges_added_import",
    "oldfieldtype": "Currency",
@@ -708,6 +720,7 @@
   {
    "fieldname": "taxes_and_charges_deducted",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Taxes and Charges Deducted",
    "oldfieldname": "other_charges_deducted_import",
    "oldfieldtype": "Currency",
@@ -954,6 +967,7 @@
    "collapsible": 1,
    "fieldname": "printing_settings",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Printing Settings"
   },
   {
@@ -1079,6 +1093,7 @@
   {
    "fieldname": "scan_barcode",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Scan Barcode",
    "options": "Barcode"
   },
@@ -1129,6 +1144,7 @@
    "collapsible": 1,
    "fieldname": "accounting_dimensions_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Accounting Dimensions"
   },
   {
@@ -1157,6 +1173,7 @@
   {
    "fieldname": "terms_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Terms"
   },
   {
@@ -1167,6 +1184,7 @@
   {
    "fieldname": "connections_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Connections",
    "show_dashboard": 1
   },
@@ -1189,6 +1207,7 @@
   {
    "fieldname": "section_break_98",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Company Shipping Address"
   },
   {
@@ -1200,6 +1219,7 @@
    "collapsible": 1,
    "fieldname": "status_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Status",
    "oldfieldtype": "Section Break",
    "options": "fa fa-file-text"
@@ -1224,6 +1244,7 @@
   {
    "fieldname": "incoterm",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Incoterm",
    "options": "Incoterm"
   },
@@ -1232,13 +1253,31 @@
    "fieldname": "named_place",
    "fieldtype": "Data",
    "label": "Named Place"
+  },
+  {
+   "fieldname": "section_break_vhsha",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_p2zcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jkqkm",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_mwetz",
+   "fieldtype": "Column Break"
   }
  ],
  "icon": "fa fa-truck",
  "idx": 261,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-12 18:40:32.447752",
+ "modified": "2023-04-04 15:43:58.239604",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Purchase Receipt",
@@ -1296,6 +1335,18 @@
    "permlevel": 1,
    "read": 1,
    "role": "Stock Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
    "write": 1
   }
  ],

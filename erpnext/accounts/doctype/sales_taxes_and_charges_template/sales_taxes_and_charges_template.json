@@ -79,18 +79,20 @@
  "icon": "fa fa-money",
  "idx": 1,
  "links": [],
- "modified": "2022-05-16 16:14:52.061672",
+ "modified": "2023-03-28 13:52:51.004392",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Taxes and Charges Template",
  "owner": "Administrator",
  "permissions": [
   {
+   "create": 1,
    "email": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Sales User"
+   "role": "Sales User",
+   "write": 1
   },
   {
    "create": 1,

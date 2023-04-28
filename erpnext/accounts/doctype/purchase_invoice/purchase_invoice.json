@@ -17,6 +17,7 @@
   "posting_date",
   "posting_time",
   "set_posting_time",
+  "column_break_lt3qu",
   "due_date",
   "column_break1",
   "is_paid",
@@ -42,10 +43,10 @@
   "plc_conversion_rate",
   "ignore_pricing_rule",
   "sec_warehouse",
-  "scan_barcode",
-  "col_break_warehouse",
   "update_stock",
   "set_warehouse",
+  "scan_barcode",
+  "col_break_warehouse",
   "set_from_warehouse",
   "is_subcontracted",
   "rejected_warehouse",
@@ -56,10 +57,10 @@
   "total_qty",
   "total_net_weight",
   "column_break_50",
+  "total",
   "base_total",
   "base_net_total",
   "column_break_28",
-  "total",
   "net_total",
   "tax_withholding_net_total",
   "base_tax_withholding_net_total",
@@ -67,8 +68,8 @@
   "tax_category",
   "taxes_and_charges",
   "column_break_58",
+  "total_taxes_and_charges",
   "shipping_rule",
-  "column_break_49",
   "incoterm",
   "named_place",
   "section_break_51",
@@ -80,17 +81,18 @@
   "column_break_40",
   "taxes_and_charges_added",
   "taxes_and_charges_deducted",
-  "total_taxes_and_charges",
   "section_break_49",
+  "grand_total",
+  "in_words",
   "base_grand_total",
   "base_rounding_adjustment",
   "base_rounded_total",
   "base_in_words",
   "column_break8",
-  "grand_total",
   "rounding_adjustment",
+  "column_break_qdmgo",
   "rounded_total",
-  "in_words",
+  "column_break_xekn3",
   "total_advance",
   "outstanding_amount",
   "disable_rounded_total",
@@ -99,6 +101,7 @@
   "base_discount_amount",
   "column_break_46",
   "additional_discount_percentage",
+  "column_break_mzqyd",
   "discount_amount",
   "tax_withheld_vouchers_section",
   "tax_withheld_vouchers",
@@ -311,6 +314,7 @@
   {
    "fieldname": "posting_time",
    "fieldtype": "Time",
+   "hidden": 1,
    "label": "Posting Time",
    "no_copy": 1,
    "print_hide": 1,
@@ -537,6 +541,7 @@
    "depends_on": "update_stock",
    "fieldname": "set_warehouse",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Set Accepted Warehouse",
    "options": "Warehouse",
    "print_hide": 1
@@ -693,12 +698,9 @@
    "print_hide": 1
   },
   {
-   "fieldname": "column_break_49",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "shipping_rule",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Shipping Rule",
    "options": "Shipping Rule",
    "print_hide": 1
@@ -783,6 +785,7 @@
   {
    "fieldname": "taxes_and_charges_added",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Taxes and Charges Added",
    "oldfieldname": "other_charges_added_import",
    "oldfieldtype": "Currency",
@@ -793,6 +796,7 @@
   {
    "fieldname": "taxes_and_charges_deducted",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Taxes and Charges Deducted",
    "oldfieldname": "other_charges_deducted_import",
    "oldfieldtype": "Currency",
@@ -1505,6 +1509,7 @@
   {
    "fieldname": "company_shipping_address_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Company Shipping Address"
   },
   {
@@ -1542,6 +1547,7 @@
   {
    "fieldname": "incoterm",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Incoterm",
    "options": "Incoterm"
   },
@@ -1549,14 +1555,31 @@
    "depends_on": "incoterm",
    "fieldname": "named_place",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Named Place"
+  },
+  {
+   "fieldname": "column_break_lt3qu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qdmgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xekn3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mzqyd",
+   "fieldtype": "Column Break"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 204,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-01-28 19:18:56.586321",
+ "modified": "2023-04-27 13:29:55.099589",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Purchase Invoice",
@@ -1609,6 +1632,18 @@
    "permlevel": 1,
    "read": 1,
    "role": "Accounts Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
    "write": 1
   }
  ],

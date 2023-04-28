@@ -112,6 +112,7 @@
   {
    "fieldname": "barcode",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Barcode",
    "print_hide": 1
   },
@@ -639,7 +640,6 @@
   {
    "fieldname": "brand",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Brand Name",
    "oldfieldname": "brand",
    "oldfieldtype": "Data",
@@ -841,6 +841,7 @@
    "allow_on_submit": 1,
    "fieldname": "discount_account",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Discount Account",
    "options": "Account"
   },
@@ -890,7 +891,7 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-10-17 12:51:44.825398",
+ "modified": "2023-03-15 13:04:16.383734",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice Item",

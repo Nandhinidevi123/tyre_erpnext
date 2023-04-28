@@ -36,9 +36,9 @@
   "language",
   "dashboard_tab",
   "tax_tab",
+  "tax_category",
   "tax_id",
   "column_break_27",
-  "tax_category",
   "tax_withholding_category",
   "contact_and_address_tab",
   "address_contacts",
@@ -457,7 +457,7 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2022-11-09 18:02:59.075203",
+ "modified": "2023-04-04 15:43:41.784539",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Supplier",
@@ -515,6 +515,18 @@
    "read": 1,
    "report": 1,
    "role": "Accounts Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,
